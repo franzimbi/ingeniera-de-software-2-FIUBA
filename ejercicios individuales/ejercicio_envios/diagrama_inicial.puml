@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class SistemaEnvios{
+Envios[ ]
+crear_envio()
+agregar_paquete(int id, Paquete)
+detalles_envio(id)
+obtener_estado(id): Estado
+}
+class Envio{
+paquetes = []
+obtener_detalle(Paquete)
+agregar_paquete()
+obtener_estado() : Estado
+}
+class Estado{
+volumen int
+costo int
+esta_vacio()
+es_valido()
+es_grande()
+obtener_volumen()
+obtener_costo()
+}
+
+
+Envio ..> Estado
+SistemaEnvios ..> Estado
+SistemaEnvios "0..*  " *-- Envio
+
+
+
+
+@enduml

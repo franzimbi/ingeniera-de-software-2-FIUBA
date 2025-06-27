@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'debug'
+gem 'guard'
+gem 'guard-rspec'
+gem 'humanize'
+gem 'rake'
+gem 'rspec'
+gem 'rubocop'
+gem 'rubocop-rspec'
+gem 'simplecov', require: false

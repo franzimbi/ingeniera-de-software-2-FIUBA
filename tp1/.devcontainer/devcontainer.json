@@ -1,0 +1,20 @@
+{
+	"name": "JobVacancy",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "webapp",
+	"workspaceFolder": "/jobvacancy",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-extensions-pack",
+        "MateuszDrewniak.ruby-test-runner",
+        "connorshea.vscode-ruby-test-adapter",
+        "actboy168.tasks"
+      ]
+    }
+  },
+  "remoteEnv": {
+    "RACK_ENV": "test"
+  },
+  "postCreateCommand": "RACK_ENV=test bundle exec rake db:migrate"
+}
